@@ -3,7 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <title>CSS Display Properties Demo</title>
-  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      margin-top: 40px;
+    }
+
+    .box {
+      background-color: crimson;
+      color: white;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    /* 1. block */
+    .block {
+      display: block;
+      width: 200px;
+      height: 80px;
+    }
+
+    /* 2. inline */
+    .inline {
+      display: inline;
+      background-color: green;
+      width: 200px;   /* ignore hoga */
+      height: 80px;   /* ignore hoga */
+    }
+
+    /* 3. inline-block */
+    .inline-block {
+      display: inline-block;
+      background-color: orange;
+      width: 200px;
+      height: 80px;
+    }
+
+    /* 4. none */
+    .none {
+      display: none;
+    }
+
+    /* 5. visibility hidden */
+    .hidden {
+      visibility: hidden;
+    }
+  </style>
 </head>
 <body>
 
