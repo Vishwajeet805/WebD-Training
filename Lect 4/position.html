@@ -3,7 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <title>CSS Position Properties</title>
-  
+  <style>
+    body {
+      height: 2000px; /* scroll ke liye */
+      font-family: Arial, sans-serif;
+    }
+
+    h2 {
+      margin-top: 60px;
+    }
+
+    .container {
+      border: 2px solid black;
+      padding: 20px;
+      margin: 40px 0;
+      position: relative; /* absolute ke reference ke liye */
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      color: white;
+      display: inline-block;
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+
+    /* 1. relative */
+    .relative {
+      background-color: crimson;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    /* 2. absolute */
+    .absolute {
+      background-color: green;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    /* 3. fixed */
+    .fixed {
+      background-color: blue;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    /* 4. sticky */
+    .sticky {
+      background-color: purple;
+      position: sticky;
+      top: 10px;
+    }
+  </style>
 </head>
 <body>
 
