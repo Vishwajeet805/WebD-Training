@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.navbar{
+     background-color: black;
+     color: whitesmoke;
+     padding: 15px 20px;
+}
+.logo{
+    font-size: 25px;
+    font-weight: bold;
+}
+.right{
+    float: right;
+}
+.cards{
+    margin: 40px;
+    text-align: center;
+}
+.card{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: inline-block;
+    width: 260px;
+    margin: 20px;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid rgb(208, 206, 206);
+}
+.on{
+    background-color: rgb(0, 255, 0);
+}
+.off{
+    background-color: red;
+}
+.badge{
+position: absolute;
+top: 15px;
+right: 15px;
+border-radius: 15px;
+padding: 4px 10px;
+color:white;
+}
+.pfp{
+    width: 90px;
+    height: 90px;
+    background-color: black;
+    font-size: 40px;
+    color: aliceblue;
+    border-radius: 50px;
+    margin: 20px auto;
+    line-height: 87px;
+}
+.role  {
+    margin: 10px;
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+
+}
+.desc{
+    border: 1px dashed rgb(151, 151, 151) ;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+.card button{
+    padding:10px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 12px;
+    margin: 10px;   
+    cursor: pointer;
+}
+.help   {
+    background-color: blue;
+    color: antiquewhite;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor:wait;
+}
