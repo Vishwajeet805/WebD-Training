@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #fffbf0;
+    font-family: Comic Sans MS, Chalkboard, Comic Neue, cursive, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+header {
+    position: sticky;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    color: white;
+}
+
+.container {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.Logo {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#title{
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+.left a:hover {
+    animation: bounce .5s ease-in-out
+}
+
+@keyframes bounce {
+    0%,to {
+        transform: translateY(0) scale(1.05)
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.05)
+    }
+}
