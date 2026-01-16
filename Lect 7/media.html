@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+
+    body {
+        background-color: lightcoral;
+    }
+
+    /* div {
+        height: 300px;
+        width: 300px;
+        border: 1px solid red;
+        background-color: yellow;
+    */
+
+    .logo {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .navbar {
+        background-color: black;
+        color: whitesmoke;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    @media screen and (max-width: 480px) {
+        .navbar {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="logo">Navbar</div>
+        <div class="page">Home </div>
+        <div class="page">Link</div>
+        <div class="page">Description</div>
+        <div class="search">
+            <input type="text" name="Seach" id="">
+            <button>search</button>
+        </div>
+    </div>
+</body>
+
+</html>
