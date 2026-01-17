@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -43,17 +44,18 @@ header {
     background: rgba(255, 255, 255, 0.25);
     border-radius: 50%;
     width: 3rem;
-    height:3rem;
+    height: 3rem;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
-#title{
+
+#title {
     font-size: 2rem;
     font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
 .left a:hover {
@@ -61,7 +63,9 @@ header {
 }
 
 @keyframes bounce {
-    0%,to {
+
+    0%,
+    to {
         transform: translateY(0) scale(1.05)
     }
 
@@ -70,13 +74,14 @@ header {
     }
 }
 
-.right{
+.right {
     display: flex;
     align-items: center;
     gap: 0.2rem;
 }
-.right div{
-    padding: 0.5rem 0.75rem ;
+
+.right div {
+    padding: 0.5rem 0.75rem;
     border-radius: 50px;
     font-weight: 600;
     color: white;
@@ -84,22 +89,83 @@ header {
     align-items: center;
     justify-content: center;
 }
-.Homelogo,.Homelogo:hover{
-background-color: white;
-}
-.hover:hover{
-background: rgba(255, 255, 255, 0.25);
-}
-.Homelogo a{
-    color:#a855f7;
+
+.Homelogo,
+.Homelogo:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
 }
 
-@media (max-width:650px){
-  .right a span{
-    display:none; 
-  }
+.hover:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
 
-  .right a{
-    padding:0.25rem;
-  }
+.Homelogo a {
+    color: #a855f7;
+}
+
+
+footer {
+    width: auto;
+    background: linear-gradient(135deg, #26d9d9, #3d7af5);
+    color: white;
+}
+
+.footcontainer {
+    padding: 1rem;
+    width: 100%;
+}
+
+.foottop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.foottop1 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: large;
+    font-weight: bold;
+}
+.foottop1 img{
+    width: 1rem;
+    height: 1rem;
+}
+
+.foottop2 {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.txtsm {
+    font-size: small;
+    font-weight: lighter;
+}
+.footbot{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    gap: 2rem;
+    font-size: xx-large;
+}
+.footbot span{
+    cursor: pointer;
+}
+@media (max-width:650px) {
+    .right a span {
+        display: none;
+    }
+
+    .right a {
+        padding: 0.25rem;
+    }
+
+    .foottop {
+        flex-direction: column;
+    }
 }
