@@ -256,12 +256,16 @@ main section {
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
 
 }
+.card:hover{    animation: bounce .5s ease-in-out
+}
 
 #purpletop {
     background: linear-gradient(90deg, #a855f7, #ec4899);
     height: 0.75rem;
 }
+button:hover{
 
+}
 #orangetop {
     background: linear-gradient(135deg, #ffaa33, #f97a1f);
     height: 0.75rem;
@@ -380,6 +384,22 @@ main section {
     width: .75rem;
     height: .75rem;
     margin-right: .25rem;
+    
+}#bluebut,
+#orangebut,
+#greenbut{
+    
+    transition: filter 0.25s ease;
+}
+#bluebut:hover,
+#orangebut:hover,
+#greenbut :hover {
+     filter: brightness(0.9);
+}
+#bluebut :active,
+#orangebut :active,
+#greenbut :active {
+     filter: brightness(0.85);
 }
 
 .startbutton {
@@ -406,8 +426,17 @@ main section {
     font-weight: 5500;
     border: none;
     font-size: small;
+    cursor: pointer;
+    transition: filter 0.25s ease;
 }
+.startbutton a button:hover{
+         filter: brightness(0.9);
 
+}
+.startbutton a button:active {
+         filter: brightness(0.85);
+
+}
 .block3 {
     background: linear-gradient(135deg, #ffaa33, #f97a1f);
     color: white;
@@ -529,7 +558,11 @@ footer {
     }
 
 }
-
+@media(max-width:900px) {
+    .cardgrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 @media (max-width:650px) {
     .right a span {
         display: none;
@@ -548,6 +581,9 @@ footer {
     }
 
     .block2 {
-        grid-column: 2;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .cardgrid {
+        grid-template-columns: repeat(1,1fr);
     }
 }
