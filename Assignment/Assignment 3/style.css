@@ -134,12 +134,17 @@ footer {
 .foottop1 img{
     width: 1rem;
     height: 1rem;
+    animation: pulse 1s infinite
 }
 
 .foottop2 {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+.foottop2 a:hover{
+    cursor: pointer;
+    animation: wiggle .5s ease-in-out
 }
 
 .txtsm {
@@ -153,9 +158,30 @@ footer {
     gap: 2rem;
     font-size: xx-large;
 }
-.footbot span{
-    cursor: pointer;
+
+.footbot span:hover {cursor: pointer;
+    animation: wiggle .5s ease-in-out
 }
+@keyframes pulse {
+    50% {
+        opacity: .5
+    }
+}
+
+@keyframes wiggle {
+    0%,to {
+        transform: rotate(0)
+    }
+
+    25% {
+        transform: rotate(-5deg)
+    }
+
+    75% {
+        transform: rotate(5deg)
+    }
+}
+
 @media (max-width:650px) {
     .right a span {
         display: none;
