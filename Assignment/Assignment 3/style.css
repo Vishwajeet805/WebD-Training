@@ -22,8 +22,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(90deg, #a855f7, #ec4899);z-index: 100;top: 0px;
-    color: white;    box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    z-index: 100;
+    top: 0px;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
 
 }
 
@@ -259,8 +262,23 @@ main section {
     height: 0.75rem;
 }
 
+#orangetop {
+    background: linear-gradient(135deg, #ffaa33, #f97a1f);
+    height: 0.75rem;
+}
+
+#bluetop {
+    background: linear-gradient(135deg, #26d9d9, #3d7af5);
+    height: 0.75rem;
+}
+
+#greentop {
+    background: linear-gradient(135deg, #22c358, #22c373);
+    height: 0.75rem;
+}
+
 .cardmain {
-    padding: 1.5rem 1.5rem 0.25rem 1.5rem;
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -308,7 +326,7 @@ main section {
 }
 
 .cardmid {
-    padding: 0rem 2rem 1rem;
+    padding: 0rem 2rem 1rem 1.5rem;
 
 }
 
@@ -329,12 +347,36 @@ main section {
     padding: .15rem .75rem;
 }
 
+#orangebut {
+    border-radius: 50px;
+    background-color: #f97a1f;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .15rem .75rem;
+}
+
+#greenbut {
+    border-radius: 50px;
+    background-color: #22c373;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .15rem .75rem;
+}
+
 .txtxsm {
     font-size: 0.8rem;
     gap: .25rem;
 }
 
-#bluebut img {
+#bluebut img,
+#orangebut img,
+#greenbut img {
     width: .75rem;
     height: .75rem;
     margin-right: .25rem;
@@ -353,7 +395,7 @@ main section {
 
 .startbutton a button {
     font-family: "Comic Sans MS", Chalkboard, "Comic Neue", cursive, sans-serif;
-    padding: 1rem;
+    padding: 1.2rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -364,6 +406,32 @@ main section {
     font-weight: 5500;
     border: none;
     font-size: small;
+}
+
+.block3 {
+    background: linear-gradient(135deg, #ffaa33, #f97a1f);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.block3top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.block3 h3 {
+    font-size: x-large;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.block3 p {
+    text-decoration-color: white;
 }
 
 footer {
