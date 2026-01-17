@@ -22,8 +22,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(90deg, #a855f7, #ec4899);
-    color: white;
+    background: linear-gradient(90deg, #a855f7, #ec4899);z-index: 100;top: 0px;
+    color: white;    box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+
 }
 
 .container {
@@ -169,7 +170,7 @@ main section {
 }
 
 .head h1 {
-    font-size: xx-large;
+    font-size: xxx-large;
     font-weight: bold;
     margin-bottom: 0.75rem;
 }
@@ -186,7 +187,7 @@ main section {
 
 .block2 {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
@@ -198,7 +199,8 @@ main section {
     cursor: pointer;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.cell div{
+
+.cell div {
     padding: 1rem;
     text-align: center;
     font-size: xx-large;
@@ -207,6 +209,161 @@ main section {
 
 .cell:hover {
     animation: bounce .5s ease-in-out
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading h2 {
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: center;
+    color: #33194d;
+    gap: 0.5rem;
+}
+
+.heading div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.cardgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
+
+}
+
+#purpletop {
+    background: linear-gradient(90deg, #a855f7, #ec4899);
+    height: 0.75rem;
+}
+
+.cardmain {
+    padding: 1.5rem 1.5rem 0.25rem 1.5rem;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.cardmain div {
+    display: flex;
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.flex div {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.flex span {
+    font-size: xx-large;
+}
+
+.flex div h3 {
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #33194d;
+
+}
+
+.flex div p {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #4d2574;
+}
+
+.flex div p img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.cardmid {
+    padding: 0rem 2rem 1rem;
+
+}
+
+.cardmid div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bluebut {
+    border-radius: 50px;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .15rem .75rem;
+}
+
+.txtxsm {
+    font-size: 0.8rem;
+    gap: .25rem;
+}
+
+#bluebut img {
+    width: .75rem;
+    height: .75rem;
+    margin-right: .25rem;
+}
+
+.startbutton {
+    padding: 0rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.startbutton a {
+    width: 100%;
+
+}
+
+.startbutton a button {
+    font-family: "Comic Sans MS", Chalkboard, "Comic Neue", cursive, sans-serif;
+    padding: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    gap: .5rem;
+    width: 100%;
+    color: white;
+    font-weight: 5500;
+    border: none;
+    font-size: small;
 }
 
 footer {
