@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smooth Bouncing Ball</title>
+
+<style>
+body{
+    height:100vh;
+    margin:0;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    background:#0b1220;
+    overflow:hidden;
+}
+
+/* ground */
+.ground{
+    position:absolute;
+    bottom:20px;
+    width:100%;
+    height:4px;
+    background:#64748b;
+}
+
+/* ball */
+.ball{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background: linear-gradient(135deg,#ff7a18,#ff3d00,#ff7a18);
+    animation: smoothBounce 1.6s infinite cubic-bezier(.4,0,.6,1);
+    transform-origin:center;
+}
+
+/* smooth bounce */
+@keyframes smoothBounce{
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+    25%{
+        transform: translateY(-220px) rotate(90deg);
+    }
+    50%{
+        transform: translateY(0) rotate(180deg);
+    }
+    65%{
+        transform: translateY(-90px) rotate(270deg);
+    }
+    80%{
+        transform: translateY(0) rotate(360deg);
+    }
+    100%{
+        transform: translateY(0) rotate(360deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="ball"></div>
+<div class="ground"></div>
+
+</body>
+</html>
