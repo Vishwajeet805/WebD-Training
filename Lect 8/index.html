@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #main{
+            height:500px;
+            width:500px;
+            background-color: rgb(255, 255, 255);
+            margin:20px auto;
+            transition: 3s;
+            position:relative;
+            transform-style: preserve-3d;
+        }  
+         
+        #main:hover{
+            transform: rotateY(180deg);
+        }
+        #card_a{
+            height:50%;
+            width:100%;
+            position:absolute;
+            z-index: 2;
+            backface-visibility: hidden;
+        }img{
+            height: 100%;
+            width: 100%;
+        }
+        #card_b{
+            height:50%;
+            width:100%;
+            position: absolute;
+            z-index: 1;
+        text-align: center;
+        
+            background-color: aqua;
+            transform: rotateY(180deg);
+        }
+        </style>
+</head>
+<body>
+    <div id="main">
+        <div id="card_a">
+
+            <img style="height: 100%; width:100%;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiF5qG7Hb1Y-vkmM-mqVpkjjRxRI9divtLDg&s"/>
+        </div>
+        <div id="card_b">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, asperiores dolore vitae, nulla atque incidunt, ut sit blanditiis veritatis cumque accusantium sequi quisquam! Repudiandae?</div>
+    </div>
+</body>
+</html>
