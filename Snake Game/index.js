@@ -107,6 +107,15 @@ function update() {
             gameOver = true
         }
     }
-    cellQ.push([newX, nexY])
+    if(newX==randomC[0]  && nexY==randomC[1]){
+    randomC=generateRandomCell()
+    count=count+1;
+
+ }
+ else{
     cellQ.shift()
-}
+
+ }
+ cellQ.push([newX,nexY])
+
+   }
