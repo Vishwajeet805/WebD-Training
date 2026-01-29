@@ -1,55 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-        body{
+        body {
             perspective: 900px;
         }
-    
-        #parent{
+
+        #parent {
             height: 500px;
             border: 2px solid red;
         }
-        .one{
+
+        .one {
             height: 100px;
-            width: 100px;transition: 3s;
+            width: 100px;
+            transition: 3s;
             border-radius: 50%;
         }
-        #one{
+
+        #one {
             background-color: goldenrod;
             transition-timing-function: linear;
         }
-        #two{
+
+        #two {
             background-color: blueviolet;
             transition-timing-function: ease-in;
         }
-        #three{
+
+        #three {
             background-color: red;
             transition-timing-function: ease-in-out;
         }
-        #four{
+
+        #four {
             background-color: green;
             transition-timing-function: ease-out;
         }
-        #five{
+
+        #five {
             background-color: palevioletred;
             transition-timing-function: cubic-bezier(0.15, 0.46, 0.65, 0.94);
         }
-        #parent:hover .one{
-            margin-left: 1161px;
-        
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-           
-        }
 
+        #parent:hover .one {
+            margin-left: 1161px;
+
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
     </style>
 </head>
-<body>
 
+<body>
     <div id="parent">
         <div id="one" class="one"></div>
         <div id="two" class="one"></div>
@@ -59,4 +65,5 @@
 
     </div>
 </body>
+
 </html>

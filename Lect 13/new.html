@@ -1,63 +1,69 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Document</title>
     <style>
+        div {
+            width: 350px;
+            height: 250px;
+            border: 2px solid black;
+        }
 
+        .side-a {
+            background-color: aquamarine;
+            backface-visibility: hidden;
+            z-index: 10;
+        }
 
-div{
-    width:350px;
-    height: 250px;
-    border: 2px solid black;
-}
-.side-a{
-    background-color: aquamarine;
-    backface-visibility: hidden;
-    z-index: 10;
-}
-.side-b{
-    background-color: coral;
-    transform: rotateY(180deg);
-}
-body{
-    perspective: 900px;
-}
-.wrapper{
-    position: relative;
-    width:350px;
-    height: 250px;
-    transition: 2s;
-    transform-style: preserve-3d;
-    margin: 30px auto;
-}
-.side-a , .side-b{
-    position: absolute;
-}
+        .side-b {
+            background-color: coral;
+            transform: rotateY(180deg);
+        }
 
-.wrapper:hover{
-    transform: rotateY(180deg);
-}
-img{
-    width: 100%;
-}
+        body {
+            perspective: 900px;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 350px;
+            height: 250px;
+            transition: 2s;
+            transform-style: preserve-3d;
+            margin: 30px auto;
+        }
+
+        .side-a,
+        .side-b {
+            position: absolute;
+        }
+
+        .wrapper:hover {
+            transform: rotateY(180deg);
+        }
+
+        img {
+            width: 100%;
+        }
     </style>
 </head>
+
 <body>
     <section class="wrapper">
         <div class="side-a">
-            <img src="https://images.unsplash.com/photo-1678110721308-a08ed05a7938?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60" alt="img">
+            <img src="https://images.unsplash.com/photo-1678110721308-a08ed05a7938?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+                alt="img">
         </div>
         <div class="side-b">
             <h2>Monument</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolorem maiores assumenda quam iste harum incidunt ipsam consequatur perferendis excepturi?</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat dolorem maiores assumenda quam iste
+                harum incidunt ipsam consequatur perferendis excepturi?</p>
         </div>
     </section>
-    
 </body>
+
 </html>
