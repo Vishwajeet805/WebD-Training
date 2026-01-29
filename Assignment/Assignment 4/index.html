@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Designer & Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <style>        * {
+    <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -22,12 +23,21 @@
             --card: #f9fafb;
         }
 
+        [data-theme="dark"] {
+            --background: #0f172a;
+            --foreground: #f1f5f9;
+            --muted: #94a3b8;
+            --border: #1e293b;
+            --card: #1e293b;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
             background: var(--background);
             color: var(--foreground);
             line-height: 1.6;
             scroll-behavior: smooth;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         /* Header */
@@ -40,6 +50,11 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        [data-theme="dark"] header {
+            background: rgba(15, 23, 42, 0.8);
         }
 
         nav {
@@ -75,6 +90,57 @@
 
         nav a:hover {
             color: var(--foreground);
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            width: 48px;
+            height: 48px;
+            border: 2px solid var(--border);
+            background: transparent;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            transform: rotate(20deg);
+                        box-shadow: 0 10px 25px hsla(229, 76%, 66%, 0.3);
+
+        }
+
+        .theme-icon {
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle .sun-icon {
+            display: block;
+        }
+
+        .theme-toggle .moon-icon {
+            display: none;
+            color:white;
+        }
+
+        [data-theme="dark"] .theme-toggle .sun-icon {
+            display: none;
+        }
+
+        [data-theme="dark"] .theme-toggle .moon-icon {
+            display: block;
         }
 
         .btn {
@@ -190,15 +256,19 @@
             background: linear-gradient(135deg, var(--primary), var(--accent));
             position: relative;
             animation: float 6s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         @keyframes float {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-20px);
             }
@@ -206,10 +276,15 @@
 
         .stat-badge {
             position: absolute;
-            background: white;
+            background: var(--background);
             padding: 1rem 1.5rem;
             border-radius: 12px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        [data-theme="dark"] .stat-badge {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
 
         .stat-badge.years {
@@ -235,6 +310,7 @@
         /* About */
         #about {
             background: var(--card);
+            transition: background-color 0.3s ease;
         }
 
         .section-header {
@@ -275,12 +351,12 @@
         }
 
         .stat-card {
-            background: white;
+            background: var(--background);
             padding: 2rem;
             border-radius: 16px;
             border: 1px solid var(--border);
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, background-color 0.3s ease;
         }
 
         .stat-card:hover {
@@ -300,7 +376,7 @@
         }
 
         .service-card {
-            background: white;
+            background: var(--background);
             padding: 2rem;
             border-radius: 16px;
             border: 1px solid var(--border);
@@ -377,11 +453,13 @@
             border-radius: 20px;
             font-size: 0.875rem;
             font-weight: 500;
+            transition: background-color 0.3s ease;
         }
 
         /* Skills */
         #skills {
             background: var(--card);
+            transition: background-color 0.3s ease;
         }
 
         .skills-grid {
@@ -404,6 +482,7 @@
             background: var(--border);
             border-radius: 10px;
             overflow: hidden;
+            transition: background-color 0.3s ease;
         }
 
         .skill-progress {
@@ -423,7 +502,7 @@
 
         .tech-badge {
             padding: 0.75rem 1.5rem;
-            background: white;
+            background: var(--background);
             border: 1px solid var(--border);
             border-radius: 20px;
             font-weight: 500;
@@ -469,6 +548,7 @@
             background: rgba(102, 126, 234, 0.05);
             border-radius: 16px;
             border: 1px solid var(--border);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .availability h4 {
@@ -487,22 +567,20 @@
         }
 
         @keyframes pulse {
-
-            0%,
-            100% {
+            0%, 100% {
                 opacity: 1;
             }
-
             50% {
                 opacity: 0.5;
             }
         }
 
         .contact-form {
-            background: white;
+            background: var(--background);
             padding: 2rem;
             border-radius: 16px;
             border: 1px solid var(--border);
+            transition: background-color 0.3s ease;
         }
 
         .form-group {
@@ -529,6 +607,15 @@
             border-radius: 8px;
             font-size: 1rem;
             font-family: inherit;
+            background: var(--background);
+            color: var(--foreground);
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
         }
 
         textarea {
@@ -540,6 +627,7 @@
         footer {
             padding: 3rem 2rem;
             border-top: 1px solid var(--border);
+            transition: border-color 0.3s ease;
         }
 
         .footer-content {
@@ -551,7 +639,6 @@
         }
 
         @media (max-width: 768px) {
-
             .hero-content,
             .about-content,
             .project,
@@ -570,7 +657,14 @@
             nav ul {
                 display: none;
             }
-        }</style>
+
+            .hero-image {
+                margin-left: 0;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -583,7 +677,25 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="btn">Let's Talk</button>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <svg class="theme-icon sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="theme-icon moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                <button class="btn">Let's Talk</button>
+            </div>
         </nav>
     </header>
 
@@ -599,20 +711,24 @@
                     <button class="btn btn-outline">Download Resume</button>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-link" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg></a>
-                    <a href="#" class="social-link" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                             <rect x="2" y="9" width="4" height="12"></rect>
                             <circle cx="4" cy="4" r="2"></circle>
-                        </svg></a>
+                        </svg>
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
-                <div class="profile-circle"><img src="https://avatars.githubusercontent.com/u/189620480?v=4" alt="" srcset=""></div>
+                <div class="profile-circle">
+                    <img src="https://avatars.githubusercontent.com/u/189620480?v=4" alt="Vishwajeet Singh">
+                </div>
                 <div class="stat-badge years">
                     <h3>5+</h3>
                     <p>Years Exp.</p>
@@ -685,7 +801,7 @@
         </div>
         <div class="project">
             <div class="project-image">
-                <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 400px;"><img src="https://resume-builder-sparkle.lovable.app/assets/project-1-B3rYv_Jm.jpg" alt="" srcset=""></div>
+                <img src="https://resume-builder-sparkle.lovable.app/assets/project-1-B3rYv_Jm.jpg" alt="Analytics Dashboard">
             </div>
             <div class="project-info">
                 <p style="color: var(--primary); font-weight: 600; font-size: 0.875rem;">Web Design & Development</p>
@@ -701,7 +817,7 @@
         </div>
         <div class="project">
             <div class="project-image">
-                <div style="background: linear-gradient(135deg, #f093fb, #f5576c); height: 400px;"><img src="https://resume-builder-sparkle.lovable.app/assets/project-2-B3SAAots.jpg" alt="" srcset=""></div>
+                <img src="https://resume-builder-sparkle.lovable.app/assets/project-2-B3SAAots.jpg" alt="Fitness Mobile App">
             </div>
             <div class="project-info">
                 <p style="color: var(--primary); font-weight: 600; font-size: 0.875rem;">Mobile App Design</p>
@@ -717,12 +833,11 @@
         </div>
         <div class="project">
             <div class="project-image">
-                <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 400px;"><img src="https://resume-builder-sparkle.lovable.app/assets/project-3-BSqD1leE.jpg" alt="" srcset=""></div>
+                <img src="https://resume-builder-sparkle.lovable.app/assets/project-3-BSqD1leE.jpg" alt="Fashion E-commerce">
             </div>
             <div class="project-info">
                 <p style="color: var(--primary); font-weight: 600; font-size: 0.875rem;">Web Design & Development</p>
-                <h3>Fashion E-commerce
-</h3>
+                <h3>Fashion E-commerce</h3>
                 <p>A modern online fashion store with seamless shopping experience and elegant design.</p>
                 <div class="tags">
                     <span class="tag">React</span>
@@ -814,7 +929,7 @@
                     <div class="contact-icon">📍</div>
                     <div>
                         <h3>Location</h3>
-                        <p>Madhya Pradesh ,India</p>
+                        <p>Madhya Pradesh, India</p>
                     </div>
                 </div>
                 <div class="availability">
@@ -850,19 +965,37 @@
         <div class="footer-content">
             <div class="logo">Port<span>folio</span></div>
             <div class="social-links">
-                <a href="#" class="social-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                            </path>
-                            <rect x="2" y="9" width="4" height="12"></rect>
-                            <circle cx="4" cy="4" r="2"></circle>
-                        </svg></a>
-                <a href="#" class="social-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                            </path>
-                        </svg></a>
+                <a href="#" class="social-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="#" class="social-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
             </div>
             <p style="color: var(--muted);">Made with ❤️ © 2026</p>
         </div>
     </footer>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        htmlElement.setAttribute('data-theme', currentTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
 </body>
 </html>
