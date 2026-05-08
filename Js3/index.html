@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = ["a", "b", "c", "d", "e", "f"]
+        arr.push(7)
+        console.log(arr)
+        arr.pop()
+        console.log(arr);
+        arr.unshift(0)
+        console.log(arr);
+        arr.shift()
+        console.log(arr)
+        arr.indexOf(3)
+        arr.includes(4)
+        let data = arr.find(function (a) {
+            return a == 5
+        })
+        console.log(data) 
+        console.log("ARR.ForEach");
+        
+        //For Each Loopppp
+        let dataa =arr.forEach((a,b,c)=>{//a= each value of arr b= index of array c=points arr 
+            console.log("Each value Of Array");
+            
+            console.log(a);
+            console.log("Index Of Array")
+            console.log(b);
+            console.log("Points Array");
+            
+            console.log(c);
+            
+            return a;//for each doesn't return any thing
+        })
+        console.log(dataa);
+                console.log("ARR.MAP");
+                
+        let beta =arr.map((a,b,c)=>{//a= each value of arr b= index of array c=points arr 
+            console.log(a)
+            return a;//return data in array type
+        })
+        console.log(beta );
+        console.log("Filter Function");
+
+        let filtere=arr.filter((a,b,c)=>{
+            return a>"a"
+        })
+        console.log(filtere,"hhhhhh");
+        
+        let arry=[1,2,3,4,5,6,7]
+        let sum=arr.reduce((a,b,c,d)=>{
+            return a+b
+        },10)
+        console.log(sum);
+        
+    </script>
+</body>
+
+</html>
