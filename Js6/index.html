@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+    <div class="board">
+      <buttton class="box"></buttton>
+      <buttton class="box"></buttton>
+      <buttton class="box"></buttton>
+
+      <buttton class="box"></buttton>
+      <buttton class="box"></buttton>
+      <buttton class="box"></buttton>
+
+      <buttton class="box"></buttton>
+      <buttton class="box"></buttton>
+      <buttton class="box"></buttton>
+    </div>
+<h2></h2>    <button id="reset">Reset </button>
+
+  </div>
+    <script>let box=document.querySelectorAll("buttton")
+let resetbtn=document.querySelector("#reset")
+let result=document.querySelector("h2")
+let win=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+let turn0=true
+console.log(box)
+for (let a of box){
+    console.log(a)
+    a.addEventListener("click",()=>{
+        if(turn0){
+            a.innerText="O"
+            turn0=false
+            
+        }else{
+            a.innerText="X"
+            turn0=true
+        }
+        a.disabled=true
+        winner()
+    })
+}
+function winner(){
+    for(let pat of win){
+        console.log(box[pat[0]])
+        let x= box[pat[0]].innerText
+        let y= box[pat[1]].innerText
+        let z= box[pat[2]].innerText
+        if(x!="" && y!="" && z!=""){
+            if(x==y && y==z){
+                result.innerText =x+" is a WINNER!"
+            }
+        }
+    }
+
+}</script>
+</body>
+</html>
