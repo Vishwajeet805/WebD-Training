@@ -1,0 +1,113 @@
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* Status Panel */
+.status-panel {
+  text-align: center;
+}
+
+.status-panel h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  color: #38bdf8;
+}
+
+.turn-indicator {
+  font-size: 1.2rem;
+  color: #94a3b8;
+}
+
+/* CSS Grid Implementation */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keeps the board perfectly square */
+  background-color: #1e293b;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Cell Styles */
+.cell {
+  background-color: #0f172a;
+  border: none;
+  border-radius: 8px;
+  font-size: 3.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell:hover {
+  background-color: #334155;
+}
+
+.cell:active {
+  transform: scale(0.95);
+}
+
+/* Ready-made utility classes for your JS to toggle */
+.cell.x {
+  color: #38bdf8; /* Bright Blue for X */
+}
+
+.cell.o {
+  color: #f43f5e; /* Bright Red/Pink for O */
+}
+
+.cell.x::before {
+  content: "X";
+}
+
+.cell.o::before {
+  content: "O";
+}
+
+/* Reset Button */
+.reset-button {
+  background-color: #38bdf8;
+  color: #0f172a;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background-color: #7dd3fc;
+}
