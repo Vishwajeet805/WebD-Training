@@ -71,6 +71,11 @@ function update(){
     if(newY==900){
             gameOver=true
         }    }
+    for(let a of snake){
+            if(a[0]==newX && a[1]==newY){
+                gameOver=true
+            }
+        }
     if(newX==fruit[0] && newY==fruit[1]){
         fruit=randomfruit()
         score++   
@@ -79,7 +84,6 @@ function update(){
         snake.shift()
     }
     p.innerText="Score ="+score
-
     snake.push([newX,newY])
 }
 function randomfruit(){
