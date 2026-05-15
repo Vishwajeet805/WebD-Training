@@ -23,7 +23,7 @@ function getLocation(){
               data.address.city ||
               data.address.town ||
               data.address.village ||
-              data.address.county ||
+              data.address.state_district||
               "Not Found";
 
       
