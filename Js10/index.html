@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App UI</title>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quiz-container {
+  width: 420px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.quiz-header h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.quiz-header span {
+  background: #f1f1ff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 20px;
+  margin: 25px 0;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 25%;
+  height: 100%;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.question-box {
+  margin-bottom: 25px;
+}
+
+.question-box h2 {
+  font-size: 22px;
+  color: #222;
+  line-height: 1.4;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.options button {
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  background: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.options button:hover {
+  border-color: #667eea;
+  background: #f5f6ff;
+  transform: translateY(-2px);
+}
+
+.options .active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.quiz-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.quiz-footer button {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+}
+
+.prev {
+  background: #999;
+}
+
+.next {
+  background: #667eea;
+}
+
+@media (max-width: 500px) {
+  .quiz-container {
+    width: 90%;
+    padding: 22px;
+  }
+
+  .question-box h2 {
+    font-size: 19px;
+  }
+}
+</style></head>
+<body>
+
+  <div class="quiz-container">
+    <div class="quiz-header">
+      <h1>Quiz App</h1>
+      <span>Question 1/5</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar"></div>
+    </div>
+
+    <div class="question-box">
+      <h2>Which language is used to style web pages?</h2>
+    </div>
+
+    <div class="options">
+      <button>HTML</button>
+      <button class="active">CSS</button>
+      <button>JavaScript</button>
+      <button>Python</button>
+    </div>
+
+    <div class="quiz-footer">
+      <button class="prev">Previous</button>
+      <button class="next">Next</button>
+    </div>
+  </div>
+
+</body>
+</html>
