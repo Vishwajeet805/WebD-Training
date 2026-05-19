@@ -123,5 +123,5 @@ function update() {
         return[
             Math.floor(Math.random()*650/50)*50,
             Math.floor(Math.random()*350/50)*50
-        ]
+        ]                                                                                     
      }
