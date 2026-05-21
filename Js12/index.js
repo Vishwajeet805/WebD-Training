@@ -59,3 +59,17 @@ let obj={
 
 let {id,isOn,name}=obj
 console.log(name,isOn);
+console.log($("h1").text("hii"));
+$("h1").css('color','red')
+$("#fadein").click(()=>{
+    $("#con").fadeIn();
+})
+$("#fadeout").click(()=>{
+    $("#con").fadeOut();
+})
+$("#fadetoggle").click(()=>{
+    $("#con").fadeToggle();
+})
+
+
+
