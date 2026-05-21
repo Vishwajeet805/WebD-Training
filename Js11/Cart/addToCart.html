@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   body{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    </style>
+ 
+</head>
+<body>
+    <h1> new pageee</h1>
+    <script>
+      let data=    JSON.parse( localStorage.getItem("item"))
+      console.log(data,"hhhrhrh");
+      
+    let body= document.querySelector("body")
+      
+    data.map((a)=>{
+        body.innerHTML+=`<div style="border:1px solid black;
+        width:250px; padding:10px; margin:10px; ">
+        <img src="${a.
+            thumbnail
+            }" width="100%" >
+        <h2> ${a.title}</h2>
+        <h3> ${a.price}</h3>
+        <button onclick="addToCart(${a.id})"> add </button>
+        `
+ 
+    })
+ 
+        
+    </script>
+</body>
+</html>
