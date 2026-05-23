@@ -8,7 +8,19 @@ let dot=document.getElementsByClassName("dot")
 const progressBar = document.querySelector('.progress-fill');
 console.log(dot);
 let submit = document.querySelector(".btn-next")
-// change_question()
+change_question()
+// for(let a in questions){
+//     console.log(questions[a].options[0]);
+//     console.log(questions[a].options[1]);
+//     console.log(questions[a].options[2]);
+//     console.log(questions[a].options[3]);
+//     console.log(" ")
+// }
+function timer(){
+    setInterval(()=>{
+
+    })
+}
 function change_question() {
     if (q <= 4) {
         progressBar.style.width = `${20 * (q + 1)}%` // Sets it to 3 of 5
@@ -82,3 +94,10 @@ const questions = [
         correct: 3
     }
 ];
+// for(let a in questions){
+//     console.log(questions[a].options[0]);
+//     console.log(questions[a].options[1]);
+//     console.log(questions[a].options[2]);
+//     console.log(questions[a].options[3]);
+//     console.log(" ")
+// }
